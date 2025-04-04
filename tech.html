@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tech Hacks - Quick Life Hacks Hub</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: url('bg-hacks.jpg') no-repeat center/cover;
+            height: 100vh;
+            overflow-x: hidden;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+        nav {
+            background: rgba(46, 204, 113, 0.9);
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: black;
+        }
+        h1 {
+            font-family: 'Bungee', cursive;
+            font-size: 2.5em;
+            color: #2ecc71;
+            text-shadow: 2px 2px 4px black;
+        }
+        .hack-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .hack-card {
+            background: rgba(255, 255, 255, 0.1);
+            background-size: cover;
+            background-position: center;
+            border: 3px solid #2ecc71;
+            border-radius: 10px;
+            width: 300px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .hack-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 0;
+        }
+        .hack-card:hover {
+            transform: translateY(-10px) rotate(2deg);
+        }
+        .hack-content {
+            position: relative;
+            z-index: 1;
+        }
+        .hack-card strong {
+            color: #2ecc71;
+            font-size: 1.1em;
+            display: block;
+        }
+        .hack-card p {
+            color: white;
+            margin: 5px 0 0;
+            font-size: 0.9em;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="container">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="kitchen.html">Kitchen</a>
+            <a href="home.html">Home</a>
+            <a href="tech.html">Tech</a>
+            <a href="beauty.html">Beauty</a>
+            <a href="clothes.html">Clothes</a>
+            <a href="car.html">Car</a>
+            <a href="bathroom.html">Bathroom</a>
+        </nav>
+        <h1>Tech Hacks</h1>
+        <div class="hack-grid">
+            <div class="hack-card" style="background-image: url('pen-spring.jpg');">
+                <div class="hack-content">
+                    <strong>Spring from a Pen to Save Cables:</strong>
+                    <p>Slide the spring from a ballpoint pen onto your charger cable to stop it from fraying at the base.</p>
+                </div>
+            </div>
+            <div class="hack-card" style="background-image: url('sticky-notes.jpg');">
+                <div class="hack-content">
+                    <strong>Sticky Notes for Keyboard Gunk:</strong>
+                    <p>Run the sticky edge of a post-it between your keyboard keys to lift crumbs and dust.</p>
+                </div>
+            </div>
+            <div class="hack-card" style="background-image: url('toothpick.jpg');">
+                <div class="hack-content">
+                    <strong>Toothpick + Cotton for Earbud Cleaning:</strong>
+                    <p>Wrap a tiny bit of cotton around a toothpick, dip in rubbing alcohol, and swirl in your earbuds to clean them safely.</p>
+                </div>
+            </div>
+            <div class="hack-card" style="background-image: url('binder-clip.jpg');">
+                <div class="hack-content">
+                    <strong>Binder Clip as Phone Stand:</strong>
+                    <p>Use two binder clips and a business card to build a quick DIY phone stand—Google it, it works.</p>
+                </div>
+            </div>
+            <div class="hack-card" style="background-image: url('sunglasses-case.jpg');">
+                <div class="hack-content">
+                    <strong>Old Sunglasses Case for Cable Organizer:</strong>
+                    <p>Perfect size for chargers, USBs, and earbuds when traveling.</p>
+                </div>
+            </div>
+            <div class="hack-card" style="background-image: url('bread-clip.jpg');">
+                <div class="hack-content">
+                    <strong>Use a Bread Clip as a Cable Label:</strong>
+                    <p>Write on it with a Sharpie and clip it to your cord to avoid cable chaos.</p>
+                </div>
+            </div>
+            <div class="hack-card" style="background-image: url('silica-packets.jpg');">
+                <div class="hack-content">
+                    <strong>Silica Packets in Tech Bags:</strong>
+                    <p>Toss a few in your laptop or camera bag to absorb moisture and protect your gear.</p>
+                </div>
+            </div>
+            <div class="hack-card" style="background-image: url('coffee-filters.jpg');">
+                <div class="hack-content">
+                    <strong>Clean Screens with Coffee Filters:</strong>
+                    <p>They’re lint-free and soft—perfect for wiping down phone or TV screens without scratches.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
