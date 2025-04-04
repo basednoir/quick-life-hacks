@@ -4,26 +4,121 @@
     <meta charset="UTF-8">
     <title>Quick Life Hacks Hub</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 20px; }
-        h1 { color: #2ecc71; }
-        ul { list-style-type: none; padding: 0; }
-        li { margin: 10px 0; }
+        body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background: url('bg-hacks.jpg') no-repeat center/cover;
+            height: 100vh;
+            overflow-x: hidden;
+        }
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
+        }
+        .container {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+        h1 {
+            font-family: 'Bungee', cursive; /* Quirky font - add via Google Fonts */
+            font-size: 3em;
+            color: #2ecc71; /* Your green */
+            text-shadow: 2px 2px 4px black;
+            margin-bottom: 10px;
+        }
+        p.tagline {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+        .hack-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .hack-card {
+            background: rgba(255, 255, 255, 0.9);
+            border: 3px solid #2ecc71;
+            border-radius: 10px;
+            width: 300px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+        .hack-card:hover {
+            transform: translateY(-10px) rotate(2deg); /* Spicy hover effect */
+        }
+        .hack-card img {
+            width: 80px;
+            height: auto;
+            float: left;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+        .hack-card strong {
+            color: #2ecc71;
+            font-size: 1.1em;
+        }
+        .hack-card p {
+            color: black;
+            margin: 5px 0 0;
+            font-size: 0.9em;
+        }
+        .ad-placeholder {
+            background: #333;
+            color: white;
+            padding: 10px;
+            margin: 20px auto;
+            width: 300px;
+            border-radius: 5px;
+        }
     </style>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>Quick Life Hacks Hub</h1>
-    <p>Unexpected tricks you’ll wish you knew sooner!</p>
-    <h2>Featured Hacks</h2>
-    <ul>
-        <li><strong>Banana Peel for Splinters:</strong> Tape the inside of a banana peel over a splinter overnight—the enzymes help draw it out like magic.</li>
-        <li><strong>Aluminum Foil to Sharpen Scissors:</strong> Snip through folded aluminum foil 8–10 times to bring dull scissors back to life.</li>
-        <li><strong>Tennis Ball for Jar Opening:</strong> Cut a tennis ball in half and use the inside as a grippy, palm-friendly jar opener.</li>
-        <li><strong>Toothpaste on Headlights:</strong> Rub non-gel toothpaste on foggy headlights, scrub with a sponge, rinse—and boom, instant clarity.</li>
-        <li><strong>Dryer Sheet in Stinky Shoes:</strong> Pop a dryer sheet in each shoe overnight to banish odor (bonus: smells like fresh laundry feet).</li>
-        <!-- Ad Placeholder -->
-        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="1234567890" data-ad-format="auto"></ins>
-        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
-    </ul>
+    <div class="overlay"></div>
+    <div class="container">
+        <h1>Quick Life Hacks Hub</h1>
+        <p class="tagline">Unexpected tricks you’ll wish you knew sooner!</p>
+        <div class="hack-grid">
+            <div class="hack-card">
+                <img src="banana-peel.jpg" alt="Banana peel">
+                <strong>Banana Peel for Splinters:</strong>
+                <p>Tape the inside of a banana peel over a splinter overnight—the enzymes help draw it out like magic.</p>
+            </div>
+            <div class="hack-card">
+                <img src="foil.jpg" alt="Foil">
+                <strong>Aluminum Foil to Sharpen Scissors:</strong>
+                <p>Snip through folded aluminum foil 8–10 times to bring dull scissors back to life.</p>
+            </div>
+            <div class="hack-card">
+                <img src="tennis-ball.jpg" alt="Tennis ball">
+                <strong>Tennis Ball for Jar Opening:</strong>
+                <p>Cut a tennis ball in half and use the inside as a grippy, palm-friendly jar opener.</p>
+            </div>
+            <div class="hack-card">
+                <img src="toothpaste.jpg" alt="Toothpaste">
+                <strong>Toothpaste on Headlights:</strong>
+                <p>Rub non-gel toothpaste on foggy headlights, scrub with a sponge, rinse—and boom, instant clarity.</p>
+            </div>
+            <div class="hack-card">
+                <img src="dryer-sheet.jpg" alt="Dryer sheet">
+                <strong>Dryer Sheet in Stinky Shoes:</strong>
+                <p>Pop a dryer sheet in each shoe overnight to banish odor (bonus: smells like fresh laundry feet).</p>
+            </div>
+        </div>
+        <div class="ad-placeholder">Ad Placeholder (Imagine an AdSense ad here!)</div>
+    </div>
 </body>
 </html>
