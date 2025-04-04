@@ -8,8 +8,9 @@
             margin: 0;
             font-family: 'Arial', sans-serif;
             background: url('bg-hacks.jpg') no-repeat center/cover;
-            min-height: 100vh; /* Ensures footer stays at bottom */
+            min-height: 100vh;
             overflow-x: hidden;
+            position: relative;
         }
         .overlay {
             position: absolute;
@@ -110,12 +111,14 @@
             border-radius: 5px;
         }
         footer {
-            position: relative;
-            z-index: 1;
+            position: absolute;
+            bottom: 0;
+            left: 0;
             padding: 10px;
             color: white;
-            text-align: center;
+            text-align: left;
             font-size: 0.9em;
+            z-index: 1;
         }
         footer a {
             color: #2ecc71;
@@ -178,7 +181,7 @@
         <div class="ad-placeholder">Ad Placeholder (Imagine an AdSense ad here!)</div>
     </div>
     <footer>
-        <p>&copy; 2025 Quick Life Hacks Hub | <a href="privacy.html">Privacy Policy</a></p>
+        <p>© 2025 Quick Life Hacks Hub | <a href="privacy.html">Privacy Policy</a></p>
     </footer>
 </body>
 </html>
