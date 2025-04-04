@@ -8,7 +8,7 @@
             margin: 0;
             font-family: 'Arial', sans-serif;
             background: url('bg-hacks.jpg') no-repeat center/cover;
-            height: 100vh;
+            min-height: 100vh; /* Ensures footer stays at bottom */
             overflow-x: hidden;
         }
         .overlay {
@@ -109,6 +109,21 @@
             width: 300px;
             border-radius: 5px;
         }
+        footer {
+            position: relative;
+            z-index: 1;
+            padding: 10px;
+            color: white;
+            text-align: center;
+            font-size: 0.9em;
+        }
+        footer a {
+            color: #2ecc71;
+            text-decoration: none;
+        }
+        footer a:hover {
+            color: white;
+        }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
@@ -162,5 +177,8 @@
         </div>
         <div class="ad-placeholder">Ad Placeholder (Imagine an AdSense ad here!)</div>
     </div>
+    <footer>
+        <p>&copy; 2025 Quick Life Hacks Hub | <a href="privacy.html">Privacy Policy</a></p>
+    </footer>
 </body>
 </html>
