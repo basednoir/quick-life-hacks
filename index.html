@@ -29,7 +29,7 @@
             text-align: center;
         }
         nav {
-            background: rgba(46, 204, 113, 0.9); /* Green nav bar */
+            background: rgba(46, 204, 113, 0.9);
             padding: 10px;
             margin-bottom: 20px;
             border-radius: 5px;
@@ -52,8 +52,18 @@
         }
         p.tagline {
             font-size: 1.2em;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             color: #fff;
+        }
+        .search-bar {
+            margin-bottom: 20px;
+        }
+        .search-bar input {
+            padding: 10px;
+            width: 300px;
+            border: 2px solid #2ecc71;
+            border-radius: 5px;
+            font-size: 1em;
         }
         .hack-grid {
             display: flex;
@@ -128,6 +138,9 @@
         </nav>
         <h1>Quick Life Hacks Hub</h1>
         <p class="tagline">Unexpected tricks you’ll wish you knew sooner!</p>
+        <div class="search-bar">
+            <input type="text" id="search" placeholder="Search hacks..." onkeyup="searchHacks()">
+        </div>
         <div class="hack-grid">
             <div class="hack-card" style="background-image: url('banana-peel.jpg');">
                 <div class="hack-content">
@@ -162,5 +175,15 @@
         </div>
         <div class="ad-placeholder">Ad Placeholder (Imagine an AdSense ad here!)</div>
     </div>
+    <script>
+        function searchHacks() {
+            let input = document.getElementById("search").value.toLowerCase();
+            let cards = document.getElementsByClassName("hack-card");
+            for (let i = 0; i < cards.length; i++) {
+                let text = cards[i].textContent.toLowerCase();
+                cards[i].style.display = text.includes(input) ? "" : "none";
+            }
+        }
+    </script>
 </body>
 </html>
