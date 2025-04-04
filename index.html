@@ -17,7 +17,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.5); /* Dark overlay for contrast */
+            background: rgba(0, 0, 0, 0.5); /* Dark overlay for main bg */
         }
         .container {
             position: relative;
@@ -29,9 +29,9 @@
             text-align: center;
         }
         h1 {
-            font-family: 'Bungee', cursive; /* Quirky font - add via Google Fonts */
+            font-family: 'Bungee', cursive;
             font-size: 3em;
-            color: #2ecc71; /* Your green */
+            color: #2ecc71;
             text-shadow: 2px 2px 4px black;
             margin-bottom: 10px;
         }
@@ -47,30 +47,42 @@
             gap: 20px;
         }
         .hack-card {
-            background: rgba(255, 255, 255, 0.9);
+            background: rgba(255, 255, 255, 0.1); /* Semi-transparent base */
+            background-size: cover;
+            background-position: center;
             border: 3px solid #2ecc71;
             border-radius: 10px;
             width: 300px;
             padding: 15px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
             transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .hack-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4); /* Dark overlay for readability */
+            z-index: 0;
         }
         .hack-card:hover {
-            transform: translateY(-10px) rotate(2deg); /* Spicy hover effect */
+            transform: translateY(-10px) rotate(2deg);
         }
-        .hack-card img {
-            width: 80px;
-            height: auto;
-            float: left;
-            margin-right: 10px;
-            border-radius: 5px;
+        .hack-content {
+            position: relative;
+            z-index: 1; /* Text above overlay */
         }
         .hack-card strong {
             color: #2ecc71;
             font-size: 1.1em;
+            display: block;
         }
         .hack-card p {
-            color: black;
+            color: white;
             margin: 5px 0 0;
             font-size: 0.9em;
         }
@@ -92,30 +104,35 @@
         <h1>Quick Life Hacks Hub</h1>
         <p class="tagline">Unexpected tricks you’ll wish you knew sooner!</p>
         <div class="hack-grid">
-            <div class="hack-card">
-                <img src="banana-peel.jpg" alt="Banana peel">
-                <strong>Banana Peel for Splinters:</strong>
-                <p>Tape the inside of a banana peel over a splinter overnight—the enzymes help draw it out like magic.</p>
+            <div class="hack-card" style="background-image: url('banana-peel.jpg');">
+                <div class="hack-content">
+                    <strong>Banana Peel for Splinters:</strong>
+                    <p>Tape the inside of a banana peel over a splinter overnight—the enzymes help draw it out like magic.</p>
+                </div>
             </div>
-            <div class="hack-card">
-                <img src="foil.jpg" alt="Foil">
-                <strong>Aluminum Foil to Sharpen Scissors:</strong>
-                <p>Snip through folded aluminum foil 8–10 times to bring dull scissors back to life.</p>
+            <div class="hack-card" style="background-image: url('foil.jpg');">
+                <div class="hack-content">
+                    <strong>Aluminum Foil to Sharpen Scissors:</strong>
+                    <p>Snip through folded aluminum foil 8–10 times to bring dull scissors back to life.</p>
+                </div>
             </div>
-            <div class="hack-card">
-                <img src="tennis-ball.jpg" alt="Tennis ball">
-                <strong>Tennis Ball for Jar Opening:</strong>
-                <p>Cut a tennis ball in half and use the inside as a grippy, palm-friendly jar opener.</p>
+            <div class="hack-card" style="background-image: url('tennis-ball.jpg');">
+                <div class="hack-content">
+                    <strong>Tennis Ball for Jar Opening:</strong>
+                    <p>Cut a tennis ball in half and use the inside as a grippy, palm-friendly jar opener.</p>
+                </div>
             </div>
-            <div class="hack-card">
-                <img src="toothpaste.jpg" alt="Toothpaste">
-                <strong>Toothpaste on Headlights:</strong>
-                <p>Rub non-gel toothpaste on foggy headlights, scrub with a sponge, rinse—and boom, instant clarity.</p>
+            <div class="hack-card" style="background-image: url('toothpaste.jpg');">
+                <div class="hack-content">
+                    <strong>Toothpaste on Headlights:</strong>
+                    <p>Rub non-gel toothpaste on foggy headlights, scrub with a sponge, rinse—and boom, instant clarity.</p>
+                </div>
             </div>
-            <div class="hack-card">
-                <img src="dryer-sheet.jpg" alt="Dryer sheet">
-                <strong>Dryer Sheet in Stinky Shoes:</strong>
-                <p>Pop a dryer sheet in each shoe overnight to banish odor (bonus: smells like fresh laundry feet).</p>
+            <div class="hack-card" style="background-image: url('dryer-sheet.jpg');">
+                <div class="hack-content">
+                    <strong>Dryer Sheet in Stinky Shoes:</strong>
+                    <p>Pop a dryer sheet in each shoe overnight to banish odor (bonus: smells like fresh laundry feet).</p>
+                </div>
             </div>
         </div>
         <div class="ad-placeholder">Ad Placeholder (Imagine an AdSense ad here!)</div>
